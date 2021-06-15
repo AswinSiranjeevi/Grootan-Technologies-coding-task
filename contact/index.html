@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="./contact.png" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.js"></script>
+	<title>Contact </title>
+</head>
+<body >
+    <div class="ui tablet computer only padded grid" >
+          <div class="ui borderless fluid inverted menu" style="font-size:16px">
+          <a href="/todos" class="active blue item" style="font-size:20px">Contact App</a>
+            <a  class="right aligned item"  style="margin-left:1100px;"   style="font-size:20px"></a>
+          </div>
+    </div>
+
+<style>
+body {
+  background-image: url("./bg.jpg");   
+}
+</style>
+
+	<main style="margin-top:15px ">
+            <div align="center" ><h3 style="color: rgb(255, 255, 255);padding-bottom: 25px;"> <i class="address card outline icon"></i>CONTACT  LIST</h3></div>
+            <div  id="cardholder">
+
+			</div>
+	</main>
+            
+   </body>
+
+<script>
+
+$( document ).ready(function() {
+    var req = new XMLHttpRequest();
+req.overrideMimeType("application/json");
+req.open('GET', "https://users123.free.beeceptor.com/users", true);
+req.onload  = function() {
+   var jsonResponse = JSON.parse(req.responseText);
+   var data=jsonResponse
+   for(var i=0;i<data.length;i++)
+{
+    
+var myvar = '<div class="ui card centered raised " style="width: 650px;margin-bottom: 5px;">'+
+'                  <div class="content">'+
+'                     <div class="header">'+
+'                            <div class="ui grid">'+
+'                                <div class="two column row">'+
+'                                    <div class="column">'+
+'                                         <i class="address card outline'+
+'                                         icon"></i>'+
+'                                     '+data[i].name +
+'                                    </div>'+
+'                                    <div class="column">'+'</div>'+
+'                              </div>'+
+'                        </div>'+
+'                     </div>'+
+'                        <div class="ui divider"></div>'+
+'                        <div class="description">'+
+'                           <h4 style="margin-top:0px "> First Name : '+data[i].firstName +'</h4>'+
+'                           <h4 style="margin-top:0px "> Last Name : '+data[i].lastName +'</h4>'+
+'                           <h4 style="margin-top:0px "> Age : '+data[i].age +'</h4>'+
+'                           <h4 style="margin-top:0px ">DOB : '+data[i].dob +'</h4>'+
+'                           <h4 style="margin-top:0px ">Address 1 : '+data[i].more.address_line1 +'</h4>'+
+'                           <h4 style="margin-top:0px ">Address 2 : '+data[i].more.address_line2 +'</h4>'+
+'                           <h4 style="margin-top:0px ">Address 3 : '+data[i].more.address_line3 +'</h4>'+
+'                           <h4 style="margin-top:0px ">Phone : '+data[i].more.phone +'</h4>'+
+'                      </div>'+
+'                  </div>'+
+'               </div>'
+'<div class="ui modal">'+
+'  <i class="close icon"></i>'+
+'  <div class="header">'+
+'    Profile Picture'+
+'  </div>'+
+'  <div class="image content">'+
+'    <div class="ui medium image">'+
+'      <img src="/images/avatar/large/chris.jpg">'+
+'    </div>'+
+'    <div class="description">'+
+'      <div class="ui header">We\'ve auto-chosen a profile image for you.</div>'+
+'      <p>We\'ve grabbed the following image from the <a href="https://www.gravatar.com" target="_blank">gravatar</a> image associated with your registered e-mail address.</p>'+
+'      <p>Is it okay to use this photo?</p>'+
+'    </div>'+
+'  </div>'+
+'  <div class="actions">'+
+'    <div class="ui black deny button">'+
+'      Nope'+
+'    </div>'+
+'    <div class="ui positive right labeled icon button">'+
+'      Yep, that\'s me'+
+'      <i class="checkmark icon"></i>'+
+'    </div>'+
+'  </div>'+
+'</div>';
+	
+$('#cardholder').append(myvar);
+
+
+}
+};
+req.send(null);
+
+
+});
+   </script>
+   </html>

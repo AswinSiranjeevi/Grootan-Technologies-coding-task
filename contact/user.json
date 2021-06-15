@@ -1,0 +1,57 @@
+[
+{
+"name": "Aswin",
+"age": 10,
+"dob": "20-10-2001",
+"firstName": "Aswin",
+"lastName": "Siranjeevi",
+"more": {
+"address_line1": "Kangeyam",
+"address_line2": "Kangeyam 638701",
+"address_line3": "Kangeyam",
+"phone": "9658748596"
+}
+},
+{
+"name": "Arul",
+"age": 21,
+"dob": "15-03-2001",
+"firstName": "Arul",
+"lastName": "Prasath",
+"more": {
+"address_line1": "5/450, salem road,Namakkal",
+"address_line2": "Namakkal",
+"address_line3": "Nkl-637001",
+"phone": "9994198484"
+}
+},
+
+{
+"name": "Ajay KB",
+"age": 21,
+"dob": "15-03-2001",
+"firstName": "Ajay",
+"lastName": "Kumar",
+"more": {
+"address_line1": "895-1 Pal street, Karur",
+"address_line2": "Karur 639001",
+"address_line3": "Karur ",
+"phone": "9876542187"
+}
+},
+
+{
+"name": "Adhitiya",
+"age": 21,
+"dob": "23-07-2001",
+"firstName": "Adhitiya",
+"lastName": "GJ",
+"more": {
+"address_line1": " K11 thindal , Erode",
+"address_line2": "Erode638012",
+"address_line3": "Erode",
+"phone": "8459851254"
+}
+}
+
+]
